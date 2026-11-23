@@ -1,34 +1,47 @@
-# 6-DOF Robotic Arm (Autodesk Fusion 360)
+# 6DOF Industrial Robotic Arm
 
-## 📌 Project Overview
-This repository contains the complete 3D CAD models and mechanical assemblies for a 6-Degree-of-Freedom (6-DOF) robotic arm. Designed entirely in Autodesk Fusion 360 during an internship at Softnexis, this project demonstrates advanced mechanical design, joint kinematics, and industrial robotics principles. 
+A six axis industrial robotic arm designed in Autodesk Fusion 360 during an internship at Softnexis.
 
-The arm is structured to mimic the articulation of an industrial manipulator, capable of complex spatial positioning and orientation.
+![Robotic arm](images/arm_view_01.png)
 
-## 🛠️ Design Specifications & Features
-* **Software Used:** Autodesk Fusion 360
-* **Degrees of Freedom:** 6 independent axes for full spatial manipulation (Base, Shoulder, Elbow, Wrist Pitch, Wrist Roll, Wrist Yaw).
-* **Mechanical Assembly:** Fully constrained joint connections (revolute joints) allowing for accurate motion studies and kinematic testing within the CAD environment.
-* **Manufacturing Readiness:** Components are optimized for real-world fabrication, with clearances and tolerances considered for 3D printing or CNC machining.
-* **Export Formats:** Includes native Fusion 360 files (`.f3d`), standard exchange files (`.step`), and mesh files (`.stl`) for easy 3D printing.
+## Overview
 
-## 📂 Repository Structure
-* `/Fusion360_Source/` - Contains the native `.f3d` assembly and individual part files.
-* `/STEP_Files/` - Universal 3D models for importing into SolidWorks, Inventor, or other CAD software.
-* `/STL_Files/` - Exported meshes ready for slicing and 3D printing.
-* `/Renders/` - High-quality rendered images of the completed robotic arm.
+The arm follows the structure of an industrial manipulator, with a rotating base, shoulder, elbow and a three axis wrist. Joints are defined in the assembly so the motion of each axis can be studied directly in the CAD environment.
 
-## 🚀 How to View and Use the Models
-**If you have Autodesk Fusion 360:**
-1. Download or clone this repository.
-2. Open Fusion 360 and open the Data Panel.
-3. Click `Upload` and select the main `.f3d` assembly file from the `/Fusion360_Source/` folder.
-4. Once uploaded, open the file to view the model, inspect the sketches, and animate the revolute joints.
+## Specifications
 
-**If you do not have CAD software:**
-You can easily view the `.step` or `.stl` files using free online 3D viewers (like Autodesk Viewer) or simply click on the `.stl` files right here in GitHub to use its built-in 3D viewer.
+| Item | Detail |
+|---|---|
+| Degrees of freedom | 6 |
+| Joint type | Revolute |
+| Software | Autodesk Fusion 360 |
+| Formats | F3Z, STEP, STL |
 
-## 🔮 Future Improvements
-* [ ] Perform structural Finite Element Analysis (FEA) on the primary load-bearing linkages.
-* [ ] Select and map specific NEMA stepper motors and servo brackets to the joints.
-* [ ] Develop the inverse kinematics algorithms using Python to control the physical prototype.
+## Repository Contents
+
+| Folder | Description |
+|---|---|
+| `cad/` | Native Fusion 360 archive (`RoboticArm6DOF.f3z`) |
+| `models/` | Exchange formats: STEP for CAD software, STL for 3D printing |
+| `images/` | Model views and joint axis reference |
+| `media/` | Motion demonstration video |
+
+## Joint Axes
+
+![Joint axes](images/arm_joint_axes.jpeg)
+
+## Opening the Model
+
+- Fusion 360: upload `cad/RoboticArm6DOF.f3z` through the Data Panel.
+- Other CAD software: import `models/RoboticArm6DOF.step`.
+- Quick preview: GitHub renders `models/RoboticArm6DOF.stl` in the browser.
+
+## Planned Work
+
+- Structural analysis of the main load bearing links
+- Motor and gearbox selection for each joint
+- Inverse kinematics implementation in Python
+
+## Author
+
+Zain Haider, Hardware and Robotics Engineer. Co founder of Robetix and founder of [Nvisco](https://nvisco.com).
